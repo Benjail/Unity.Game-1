@@ -5,17 +5,15 @@ using UnityEngine.SceneManagement;
 [RequireComponent (typeof(GroundChecker))]
 public class  Player : MonoBehaviour
 {
-    
     public int Health;
     public int CountDimonds;
     public GameObject Inventory;
-    public GameObject AirDrop;
+    public AirDrop AirDrop;
     public float Speed;
     public float Jumpforce;
-    private Rigidbody2D _rigidbody2D; //создаю физ тело 
-    private Animator _animator;  //аниматор 
+    private Rigidbody2D _rigidbody2D;             
+    private Animator _animator;  
     private GroundChecker _groundchecker;
-    public AirDrop _airdrop;
     public void TakeDamage(int damage)
     {
         Health -= damage;
@@ -24,20 +22,9 @@ public class  Player : MonoBehaviour
     {
         _rigidbody2D.AddForce(Vector2.up * Jumpforce, ForceMode2D.Impulse);
     }
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Chest"))
-        {
-            Debug.Log("Коснулись сундука");
-        }
-    }*/
     private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Chest")&&Input.GetKeyDown(KeyCode.E))
-        {
-            collision.gameObject.GetComponent<Chest>().Open();
-        }
-        if (collision.gameObject.CompareTag("Item"))
+    { 
+        if (collision.gameObject.CompareTag("Item"))                
         {         
             collision.gameObject.SetActive(false);
             collision.gameObject.transform.SetParent(Inventory.transform);
@@ -48,11 +35,10 @@ public class  Player : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();                             
         _animator = GetComponent<Animator>();                       
-        _groundchecker = GetComponent<GroundChecker>();
-        _airdrop= GetComponent<AirDrop>(); 
-    }                                                                                                                                                      
+        _groundchecker = GetComponent<GroundChecker>();     
+    }
     void Update()                                                           
-    {                                                                       
+    {          
         float horizontal = Input.GetAxisRaw("Horizontal");                  
         _rigidbody2D.velocity = new Vector2(horizontal* Speed, _rigidbody2D.velocity.y); 
         if (horizontal > 0)
@@ -77,12 +63,9 @@ public class  Player : MonoBehaviour
         {
             SceneManager.LoadScene("Меню");
         }
-        if (_airdrop.ItemDatas.Count == CountDimonds) 
+        if (AirDrop.ItemDatas.Count == CountDimonds) 
         {
-            SceneManager.LoadScene("Меню");                     
+            SceneManager.LoadScene("Меню");
         }
     }
-}   
-
-
-
+}  
