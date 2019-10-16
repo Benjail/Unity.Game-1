@@ -1719,12 +1719,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783173861}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.37, y: 1.7, z: -0.10180838}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.3700004, y: 1.7, z: -0.10180838}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &783173864
 MonoBehaviour:
@@ -1760,6 +1760,7 @@ MonoBehaviour:
   - Label: 2
     cost: 2
   Item: {fileID: 5143348144759254880, guid: c6b973a3dc09e8b4ea38a896e781310e, type: 3}
+  Barrier: {fileID: 1942574198636374153, guid: f2b99fd316bdcf3438d89561459ca794, type: 3}
   HalfWidth: 25
 --- !u!1 &813924403
 GameObject:
@@ -2360,7 +2361,7 @@ Transform:
   m_Children:
   - {fileID: 1016399470}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1222560192
 GameObject:
