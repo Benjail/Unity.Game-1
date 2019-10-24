@@ -9,19 +9,22 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.bin
+*.info
+*.dll
 
-# User-specific files (MonoDevelop/Xamarin Studio)
-*.userprefs
+# User-specific files (MonoDevelop/Xamarin Studio)				
+*.userprefs									
 
 # Build results
 [Dd]ebug/
-[Dd]ebugPublic/
+[Dd]ebugPublic/										
 [Rr]elease/
-[Rr]eleases/
+[Rr]eleases/										
 x64/
 x86/
 [Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
+[Aa][Rr][Mm]64/											
 bld/
 [Bb]in/
 [Oo]bj/
