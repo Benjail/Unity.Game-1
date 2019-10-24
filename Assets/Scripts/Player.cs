@@ -61,11 +61,11 @@ public class  Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))//выход в главное меню
         {
-            SceneManager.LoadScene("Меню");
+            SceneManager.LoadScene("Menu");
         }
         if (AirDrop.ItemDatas.Count == CountDimonds) 
         {
-            SceneManager.LoadScene("Меню");
+            SceneManager.LoadScene("Menu");
         }
     }
 }  

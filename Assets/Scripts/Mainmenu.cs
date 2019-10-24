@@ -10,10 +10,6 @@ public class Mainmenu : MonoBehaviour
     {
         SceneManager.LoadScene("Level 1");
     }
-    public void Upravlenie()
-    {
-        SceneManager.LoadScene("Управление");
-    }
     public void About()
     {
         Aboutanimator.SetBool("IsOpen", !Aboutanimator.GetBool("IsOpen"));

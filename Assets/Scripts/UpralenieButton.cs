@@ -18,6 +18,6 @@ public class UpralenieButton : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("Меню");
+            SceneManager.LoadScene("Menu");
     }
 }
