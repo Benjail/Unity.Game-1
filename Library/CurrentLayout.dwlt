@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 581, y: 498}
   m_MaxSize: {x: 14002, y: 14048}
   vertical: 0
-  controlID: 13
+  controlID: 37
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 14
+  controlID: 38
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 15
+  controlID: 39
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -623,9 +623,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: b6f8ffffcef8ffffdaf9ffffe2f9ffffd6fbffff
+      m_SelectedIDs: 340e0000
+      m_LastClickedID: 3636
+      m_ExpandedIDs: d6fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -687,20 +687,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\\u041C\u0438\u0445\u0430\u0438\u043B\\source\\repos\\Unity.Game-1"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 113.00018}
-    m_SelectedIDs: a60b0000
-    m_LastClickedID: 2982
-    m_ExpandedIDs: 00000000ae090000e80b0000c40c0000882b00008a2b00008c2b000000ca9a3b
+    scrollPos: {x: 0, y: 103}
+    m_SelectedIDs: ac090000
+    m_LastClickedID: 2476
+    m_ExpandedIDs: 00000000ac090000e60b0000c20c0000882b00008a2b00008c2b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -728,7 +728,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ae090000e80b0000c40c0000882b00008a2b00008c2b0000
+    m_ExpandedIDs: 00000000ac090000e60b0000c20c0000882b00008a2b00008c2b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
