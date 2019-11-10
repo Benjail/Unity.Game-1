@@ -1,24 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; 
 
-public class Mainmenu : MonoBehaviour
+public class Mainmenu : MonoBehaviour 
 {
-    public Animator Aboutanimator;
-    public void Play()
+    [SerializeField] private Animator Aboutanimator;
+    private void Play()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level 1");  
     }
-    public void Upravlenie()
+    private void About()
     {
-        SceneManager.LoadScene("Управление");
+        Aboutanimator.SetBool("IsOpen", !Aboutanimator.GetBool("IsOpen")); 
     }
-    public void About()
-    {
-        Aboutanimator.SetBool("IsOpen", !Aboutanimator.GetBool("IsOpen"));
-    }
-    public void Exit()
+    private void Exit() 
     {
         Application.Quit();
     }

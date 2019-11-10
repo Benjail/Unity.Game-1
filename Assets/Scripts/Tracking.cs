@@ -4,19 +4,11 @@ using UnityEngine;
 
 public class Tracking : MonoBehaviour
 {
-    public float Speed;
-    public GameObject GameObject;
-    public GameObject border;//граница   
-    public float marginY;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [SerializeField] private float _speed;
+    [SerializeField] private GameObject _gameObject;
+    [SerializeField] private float _marginY;
     void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, new Vector3(GameObject.transform.position.x, GameObject.transform.position.y+marginY, transform.position.z),Speed*Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(_gameObject.transform.position.x, _gameObject.transform.position.y+_marginY, transform.position.z),_speed*Time.deltaTime);
     }
 }

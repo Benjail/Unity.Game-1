@@ -3,19 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UpralenieButton : MonoBehaviour
+public class Buttons : MonoBehaviour
 {
-    public void Menu()
+   private void Escape()
     {
-
         SceneManager.LoadScene("Menu");
+    }
 
-    }
-    private void Start()
-    {
-        
-    }
-    private void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             SceneManager.LoadScene("Menu");

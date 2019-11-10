@@ -1,25 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;   
+using System.Collections.Generic;  
 using UnityEngine;
+using System;
 
-public class AirDrop : MonoBehaviour
-{
-    public List<ItemData> ItemDatas;
-   // public List<ItemData> ItemDatas2;
-    //public Chest Chest;
-    public Item Item;
-    
-    public GameObject Barrier;
-    public float HalfWidth;
-    private void Start()
+public class AirDrop : MonoBehaviour 
+{    
+    public int ItemsCount { get; private set; }
+    [SerializeField] private GameObject _barrier; 
+    [SerializeField] private float _halfWidth; 
+    [SerializeField] private GameObject _item; 
+    private int _itemsCountrand()
     {
-        for (int i = 0; i < ItemDatas.Count; i++)
-        {
-            Instantiate(Item, new Vector3(Random.Range(transform.position.x - HalfWidth, transform.position.x + HalfWidth), transform.position.y, transform.position.z), Quaternion.identity).Data = ItemDatas[i];
+        System.Random rnd = new System.Random();
+        int i;
+        return  i= rnd.Next(0,10);
+    }
+    void Start()  
+    {
+        ItemsCount = _itemsCountrand();
+        for (int i = 0; i < ItemsCount; i++)  
+        { 
+            Instantiate(_item, new Vector3(UnityEngine.Random.Range(transform.position.x - _halfWidth, transform.position.x + _halfWidth), transform.position.y, transform.position.z), Quaternion.identity);
+            Instantiate(_barrier, new Vector3(UnityEngine.Random.Range(transform.position.x - _halfWidth, transform.position.x + _halfWidth), transform.position.y, transform.position.z), Quaternion.identity);
         }
-        for (int i = 0; i < 5; i++)
-        {
-            Instantiate(Barrier, new Vector3(Random.Range(transform.position.x - HalfWidth, transform.position.x + HalfWidth), transform.position.y, transform.position.z), Quaternion.identity);
-        }
-    }  
-}
+    }   
+} 

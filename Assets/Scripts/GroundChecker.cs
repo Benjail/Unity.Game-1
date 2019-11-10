@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GroundChecker : MonoBehaviour
 {
-   [SerializeField] private GameObject _сheckpoint;//точка проверки касания
-   [SerializeField] private float _radius; // радиус проверки
-   [SerializeField] private LayerMask _whatisGround; //слой, который принимаем в качестве нужного (Ground)
+   [SerializeField] private GameObject _сheckpoint;
+   [SerializeField] private float _radius; 
+   [SerializeField] private LayerMask _whatisGround; 
     public bool CheckGround()                                               
     {
         return Physics2D.OverlapCircle(_сheckpoint.transform.position, _radius, _whatisGround);

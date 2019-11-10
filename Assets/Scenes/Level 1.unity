@@ -546,8 +546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2efb3ccbd58396a4a869897007ee03db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DrawnCoolDown: 2
-  Damage: 1
 --- !u!1 &208884020
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,9 +674,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a58aae81ff2e774b8a42919a5275245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airDrop: {fileID: 0}
-  Player: {fileID: 1534576458}
-  CountDimonds: {fileID: 0}
+  _airDrop: {fileID: 783173864}
+  _player: {fileID: 1534576458}
+  _countDimonds: {fileID: 1906792825}
 --- !u!114 &339454751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,7 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7f998c722ae634f89c1fae3333382b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 2
   GameObject: {fileID: 1534576453}
   border: {fileID: 0}
   marginY: 2
@@ -1665,30 +1663,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d5bf45ab33c34349848d54e02ff59b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemDatas:
-  - Label: 1
-    cost: 1
-  - Label: 2
-    cost: 2
-  - Label: 2
-    cost: 2
-  - Label: 2
-    cost: 2
-  - Label: 2
-    cost: 2
-  - Label: 2
-    cost: 2
-  - Label: 2
-    cost: 2
-  - Label: 2
-    cost: 2
-  - Label: 2
-    cost: 2
-  - Label: 2
-    cost: 2
-  Item: {fileID: 5143348144759254880, guid: c6b973a3dc09e8b4ea38a896e781310e, type: 3}
-  Barrier: {fileID: 1942574198636374153, guid: f2b99fd316bdcf3438d89561459ca794, type: 3}
-  HalfWidth: 25
+  ItemsCount: 0
+  _barrier: {fileID: 1942574198636374153, guid: f2b99fd316bdcf3438d89561459ca794,
+    type: 3}
+  _halfWidth: 25
+  _item: {fileID: 8569346071298395603, guid: c6b973a3dc09e8b4ea38a896e781310e, type: 3}
 --- !u!1 &813924403
 GameObject:
   m_ObjectHideFlags: 0
@@ -11563,7 +11542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534576453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.2, y: -2.7, z: 0}
+  m_LocalPosition: {x: -38.4, y: -2.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 464952167}
@@ -11630,12 +11609,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21804966a64604b488680d78052d587e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
-  CountDimonds: 0
   Inventory: {fileID: 464952166}
-  AirDrop: {fileID: 783173864}
-  Speed: 4
-  Jumpforce: 31
+  _airdrop: {fileID: 783173864}
+  Speed: 6
+  Jumpforce: 30
 --- !u!95 &1534576459
 Animator:
   serializedVersion: 3
@@ -11723,9 +11700,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a58aae81ff2e774b8a42919a5275245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airDrop: {fileID: 783173864}
-  Player: {fileID: 1534576458}
-  CountDimonds: {fileID: 1906792825}
+  _airDrop: {fileID: 783173864}
+  _player: {fileID: 1534576458}
+  _countDimonds: {fileID: 1906792825}
 --- !u!222 &1633835893
 CanvasRenderer:
   m_ObjectHideFlags: 0
