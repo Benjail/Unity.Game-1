@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Mainmenu : MonoBehaviour 
 {
-    [SerializeField] private Animator Aboutanimator;
-    private void Play()
+    [SerializeField] private Animator Aboutanimator;    
+    private void Play() 
     {
         SceneManager.LoadScene("Level 1");  
     }
@@ -14,8 +14,8 @@ public class Mainmenu : MonoBehaviour
     {
         Aboutanimator.SetBool("IsOpen", !Aboutanimator.GetBool("IsOpen")); 
     }
-    private void Exit() 
+    private void Exit()     
     {
-        Application.Quit();
+        Application.Quit(); 
     }
 }

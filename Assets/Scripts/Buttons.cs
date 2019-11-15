@@ -5,14 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-   private void Escape()
+        private void Update()
     {
-        SceneManager.LoadScene("Menu");
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("Menu");
+        if (Input.GetKeyDown(KeyCode.Escape))       
+            SceneManager.LoadScene("Menu");     
     }
 }

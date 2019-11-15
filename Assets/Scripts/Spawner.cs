@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent (typeof(GroundChecker))]
-public class Player : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
-    public int CountDimonds { get; private set; }
+    [SerializeField] private int CountDimonds;   
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpforce;
     private Rigidbody2D _rigidbody2D;             
     private GroundChecker _groundchecker;
+    public int GetCountDimonds()
+    {
+        return CountDimonds;
+    }
     private void Jump()
     {
         _rigidbody2D.AddForce(Vector2.up * _jumpforce, ForceMode2D.Impulse);
@@ -21,12 +25,12 @@ public class Player : MonoBehaviour
             CountDimonds += 1;
         }
     }
-    void Start()
+    private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();                                                  
         _groundchecker = GetComponent<GroundChecker>();
     }
-    void Update()                                                           
+    private void Update()                                                           
     {          
         float horizontal = Input.GetAxisRaw("Horizontal");                  
         _rigidbody2D.velocity = new Vector2(horizontal* _speed, _rigidbody2D.velocity.y); 

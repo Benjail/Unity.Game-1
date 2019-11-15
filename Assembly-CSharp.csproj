@@ -65,10 +65,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AirDrop.cs" />
     <Compile Include="Assets\Scripts\Buttons.cs" />
+    <Compile Include="Assets\Scripts\GoldChecker.cs" />
     <Compile Include="Assets\Scripts\GroundChecker.cs" />
     <Compile Include="Assets\Scripts\InGameUI.cs" />
     <Compile Include="Assets\Scripts\Mainmenu.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Tracking.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Михаил/source/repos/Unity.Game-1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
