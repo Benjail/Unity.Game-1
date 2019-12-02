@@ -6,9 +6,10 @@ public class GroundChecker : MonoBehaviour
 {
    [SerializeField] private GameObject _сheckpoint;
    [SerializeField] private float _radius; 
-   [SerializeField] private LayerMask _whatisGround; 
+   [SerializeField] private LayerMask _groundLayer;                               
+
     public bool CheckGround()                                               
     {
-        return Physics2D.OverlapCircle(_сheckpoint.transform.position, _radius, _whatisGround);
+        return Physics2D.OverlapCircle(_сheckpoint.transform.position, _radius, _groundLayer);
     }
 }

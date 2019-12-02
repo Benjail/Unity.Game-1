@@ -1,22 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;  
-using UnityEngine.SceneManagement;  
-
+using UnityEngine.SceneManagement;
 public class GoldChecker : MonoBehaviour                      
 {
-    [SerializeField] private AirDrop _airDrop;            
-    [SerializeField] private Spawner _spawner;                
+    [SerializeField] private AirDrop _airDrop;                                      
+    [SerializeField] private Spawner _spawner;                                      
 
-   public bool IsGoldCollected()
+    public bool IsGoldCollected()                                              
     {
-        return _airDrop.GetItemsCount() == _spawner.GetCountDimonds();
+        return _airDrop.CountGold == _spawner.CountGold;                                                  
     }
-   private void Update()        
+   private void Update()                                                        
     {       
-        if (IsGoldCollected())     
+        if (IsGoldCollected())                                                                              
         {
-            SceneManager.LoadScene("Menu");         
+            SceneManager.LoadScene("Menu");                                   
         }       
     }       
-}       
+}

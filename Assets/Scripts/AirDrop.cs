@@ -4,29 +4,27 @@ using UnityEngine;
 
 public class AirDrop : MonoBehaviour 
 {
-    [SerializeField] private int ItemsCount;
-    [SerializeField] private GameObject _barrierPrefab; 
-    [SerializeField] private float _halfWidth;  
-    [SerializeField] private GameObject _item;
-    private int RandItemsCount() 
+    [SerializeField] private GameObject _barrierPrefab;                     
+    [SerializeField] private float _halfWidth;                              
+    [SerializeField] private GameObject _gold;                                  
+
+    private int _countGold;        
+    public int CountGold { get=>_countGold; private set=>_countGold=value;}
+
+    private int GetRandomGoldCount()                                               
     {
-        int i= UnityEngine.Random.Range(0, 10); 
-        return i;
+        return Random.Range(0, 10);                                         
     }
-    public int GetItemsCount() 
+    public void InstantiateObject(GameObject gameObject)                                
     {
-        return ItemsCount; 
-    }
-    public void InstantiateObject(GameObject gameObject)
+        Instantiate(gameObject,transform.position + new Vector3(Random.Range(- _halfWidth, + _halfWidth),0, 0), Quaternion.identity);
+    }                                    
+    private void Start()                                                        
     {
-        Instantiate(gameObject, new Vector3(UnityEngine.Random.Range(transform.position.x - _halfWidth, transform.position.x + _halfWidth), transform.position.y, transform.position.z), Quaternion.identity);
-    }
-   private void Start()  
-    {
-        ItemsCount = RandItemsCount();  
-        for (int i = 0; i < ItemsCount; i++)  
+        _countGold = GetRandomGoldCount();                                       
+        for (int i = 0; i < _countGold; i++)                                   
         { 
-            InstantiateObject(_item);
+            InstantiateObject(_gold);                                       
             InstantiateObject(_barrierPrefab);
         }
     }   

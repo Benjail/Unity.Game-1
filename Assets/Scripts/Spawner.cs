@@ -1,50 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent (typeof(GroundChecker))]
+
+[RequireComponent(typeof(Movement))]
+[RequireComponent(typeof(GoldChecker))]
 public class Spawner : MonoBehaviour
-{
-    [SerializeField] private int CountDimonds;   
-    [SerializeField] private float _speed;
-    [SerializeField] private float _jumpforce;
-    private Rigidbody2D _rigidbody2D;             
-    private GroundChecker _groundchecker;
-    public int GetCountDimonds()
+{                                    
+    private int _countGold;
+    private Movement _movement;
+    public int CountGold { get => _countGold; private set => _countGold = value; }
+
+    private void OnCollisionStay2D(Collision2D collision)                           
     {
-        return CountDimonds;
-    }
-    private void Jump()
-    {
-        _rigidbody2D.AddForce(Vector2.up * _jumpforce, ForceMode2D.Impulse);
-    }
-    private void OnCollisionStay2D(Collision2D collision)           
-    { 
-        if (collision.gameObject.CompareTag("Item"))                
+        if (collision.gameObject.CompareTag("Item"))                        
         {
-            collision.gameObject.SetActive(false);
-            CountDimonds += 1;
+            Destroy(collision.gameObject);                                      
+            CountGold ++;                                                   
         }
     }
     private void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();                                                  
-        _groundchecker = GetComponent<GroundChecker>();
+        _movement = GetComponent<Movement>();
     }
     private void Update()                                                           
-    {          
-        float horizontal = Input.GetAxisRaw("Horizontal");                  
-        _rigidbody2D.velocity = new Vector2(horizontal* _speed, _rigidbody2D.velocity.y); 
-        if (horizontal > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1);                    
-        }
-        else if (horizontal < 0)                                        
-        {                                                                                                     
-            transform.localScale = new Vector3(-1, 1, 1);               
-        }       
-        if (Input.GetKeyDown(KeyCode.Space) && _groundchecker.CheckGround())
-        {
-            Jump();
-        }
+    {
+        _movement.Move();
     }
 }  

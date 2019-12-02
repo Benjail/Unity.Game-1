@@ -1071,6 +1071,7 @@ GameObject:
   - component: {fileID: 1531862574}
   - component: {fileID: 1531862573}
   - component: {fileID: 1531862575}
+  - component: {fileID: 1531862577}
   - component: {fileID: 1531862576}
   m_Layer: 5
   m_Name: "\u041C\u0435\u043D\u044E"
@@ -1148,7 +1149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69024961984fbe94184ac33b41659ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Aboutanimator: {fileID: 123071502}
+  _textAnimator: {fileID: 123071502}
 --- !u!114 &1531862576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,6 +1173,18 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &1531862577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531862571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1172e4328cedaa14b962babaebb841fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2038815777
 GameObject:
   m_ObjectHideFlags: 0
