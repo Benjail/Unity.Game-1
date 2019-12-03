@@ -10,6 +10,7 @@ public class MoveObject : MonoBehaviour
 
     private Rigidbody2D _rigidbody2D;
     private GroundChecker _groundChecker;
+
     public void Move()
     {
         float Horizontal = Input.GetAxisRaw("Horizontal");

@@ -15,8 +15,7 @@ public class EndGameChecker : MonoBehaviour
     {       
         if (IsGoldCollected())                                                                              
         {
-            SceneManager.LoadScene("Menu");   
-            
+            SceneManager.LoadScene("Menu");                
         }       
     }       
 }
