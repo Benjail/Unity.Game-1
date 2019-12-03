@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(GroundChecker))]
-public class Movement : MonoBehaviour
+public class MoveObject : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpforce;
@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
         _rigidbody2D.velocity = new Vector2(Horizontal * _speed, _rigidbody2D.velocity.y);
         if (Horizontal > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);            
         }
         else if (Horizontal < 0)
         {

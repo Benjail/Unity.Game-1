@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{7B1F4906-4956-C793-ACFC-1125643A9A9C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -65,12 +64,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AirDrop.cs" />
-    <Compile Include="Assets\Scripts\GoldChecker.cs" />
+    <Compile Include="Assets\Scripts\EndGameChecker.cs" />
     <Compile Include="Assets\Scripts\GroundChecker.cs" />
     <Compile Include="Assets\Scripts\InGameUI.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\Movement.cs" />
+    <Compile Include="Assets\Scripts\MoveObject.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Tags.cs" />
     <Compile Include="Assets\Scripts\Tracking.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Михаил/source/repos/Unity.Game-1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
