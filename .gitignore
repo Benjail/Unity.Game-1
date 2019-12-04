@@ -9,9 +9,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-*.info
-*.bin
-*.dll
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -341,3 +338,8 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Library
+/Temp
+/Assets/Animation/Prompts/Panel.controller
+/Assets/Animation/Prompts/Сollect crystals.anim
+/Assets/Animation/Tree/Rocking.anim
